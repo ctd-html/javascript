@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>Some Javascript</title>
+<style>
+body {
+    font-family: Helvetica;
+    font-size: 30px;
+}
+
+.magic {
+    background: lightblue;
+}
+
+.clicked {
+    font-weight: bold;
+    font-family: Georgia;
+    background: pink;
+    padding: 10px;
+    transition: background 2s ease, padding 2s ease 2s;
+}
+</style>
+</head>
+<body>
+
+<p id="thisday" class="whatday">
+    this is day 11
+</p>
+
+<ul>
+    <li class="lesson">lesson 1</li>
+    <li class="lesson">lesson 2</li>
+    <li class="lesson">lesson 3</li>
+</ul>
+
+<p>
+    <a href="#" onclick="return megapro(this)">click me</a>
+</p>
+
+<script>
+function megapro(theLink) {
+    theLink.className = "clicked";
+    document.getElementById('thisday').className += " magic";
+    return false;
+}
+</script>
+
+</body>
+</html>
